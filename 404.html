@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>30ok_最新网通传奇|30ok超变态SF资讯聚合平台</title>
+<meta name="keywords" content="30ok,最新网通传奇,30ok超变态SF,网通传奇,超变态SF,网通SF发布网,网通传奇私服,网通新开传奇,超变态传奇,30ok发布站">
+<meta name="description" content="30ok传奇发布网专注最新网通传奇与30ok超变态SF资讯聚合，为北方网通玩家提供最全最新的网通传奇新开服信息、超变态SF攻略、网通不卡传奇资源，网通专线万人同屏不卡不掉线。">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: "Microsoft Yahei", sans-serif; background: #1a0f0a; color: #f0e0d0; line-height: 1.6; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 15px; }
+
+/* 顶部广告 */
+.ad-top { width: 100%; background: #000; min-height: 4000px; }
+.ad-top iframe { width: 100%; }
+
+/* 顶部栏 */
+.top-bar { background: linear-gradient(90deg, #2d0808, #4a1010); border-bottom: 1px solid #8b0000; padding: 8px 0; font-size: 13px; color: #d4af37; }
+.top-bar .container { display: flex; justify-content: space-between; align-items: center; }
+.top-time { color: #ffd700; font-weight: bold; }
+
+/* 头部 */
+header { background: linear-gradient(180deg, #4a1010, #2d0808); border-bottom: 3px solid #d4af37; padding: 20px 0; }
+.header-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+.logo { font-size: 36px; font-weight: 900; color: #ffd700; text-shadow: 2px 2px 4px #000, 0 0 10px #ffd700; }
+.logo span { color: #ff4500; font-size: 18px; display: block; margin-top: 5px; font-weight: normal; text-shadow: none; }
+.header-desc { text-align: right; color: #ffc0cb; font-size: 14px; }
+.header-tags { display: flex; gap: 10px; margin-top: 8px; justify-content: flex-end; flex-wrap: wrap; }
+.header-tags span { background: #8b0000; color: #ffd700; padding: 2px 10px; border-radius: 3px; font-size: 12px; border: 1px solid #d4af37; }
+
+/* 导航 */
+nav { background: linear-gradient(90deg, #8b0000, #a52a2a); border-bottom: 2px solid #d4af37; }
+nav ul { display: flex; flex-wrap: wrap; }
+nav li a { display: block; padding: 12px 20px; color: #fff; font-weight: bold; transition: all 0.3s; border-right: 1px solid rgba(255,215,0,0.2); }
+nav li a:hover { background: #d4af37; color: #4a1010; }
+
+/* 公告栏 */
+.announcement { background: #000; border-bottom: 1px solid #d4af37; padding: 10px 0; overflow: hidden; }
+.announcement-label { background: #8b0000; color: #ffd700; padding: 4px 12px; font-weight: bold; font-size: 14px; margin-right: 15px; display: inline-block; }
+.announcement-scroll { display: inline-block; white-space: nowrap; animation: scroll 30s linear infinite; color: #fff; font-size: 14px; }
+@keyframes scroll { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
+
+/* 主横幅 */
+.banner-section { display: grid; grid-template-columns: 2fr 1fr; gap: 15px; margin: 20px 0; }
+.banner-main { position: relative; border: 2px solid #d4af37; border-radius: 4px; overflow: hidden; }
+.banner-main img { width: 100%; height: 320px; object-fit: cover; display: block; }
+.banner-overlay { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.9)); padding: 30px 20px 20px; }
+.banner-overlay h1 { color: #ffd700; font-size: 28px; margin-bottom: 8px; text-shadow: 2px 2px 4px #000; }
+.banner-overlay p { color: #fff; font-size: 14px; }
+
+.banner-side { display: grid; grid-template-rows: 1fr 1fr; gap: 15px; }
+.feature-box { background: linear-gradient(135deg, #2d0808, #4a1010); border: 2px solid #d4af37; border-radius: 4px; padding: 15px; display: flex; align-items: center; gap: 12px; transition: all 0.3s; }
+.feature-box:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(212,175,55,0.3); }
+.feature-icon { width: 50px; height: 50px; background: #8b0000; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; color: #ffd700; border: 2px solid #d4af37; flex-shrink: 0; }
+.feature-text h3 { color: #ffd700; font-size: 15px; margin-bottom: 3px; }
+.feature-text p { color: #ccc; font-size: 12px; }
+
+/* 区块标题 */
+.section-title { background: linear-gradient(90deg, #8b0000, transparent); border-left: 4px solid #ffd700; padding: 10px 15px; margin: 25px 0 15px; color: #ffd700; font-size: 18px; font-weight: bold; display: flex; justify-content: space-between; align-items: center; }
+.section-title a { font-size: 13px; color: #ffc0cb; font-weight: normal; }
+.section-title a:hover { color: #ffd700; }
+
+/* 开服列表 */
+.server-list { background: #2d1810; border: 1px solid #8b0000; border-radius: 4px; overflow: hidden; }
+.server-table { width: 100%; border-collapse: collapse; }
+.server-table th { background: linear-gradient(90deg, #4a1010, #8b0000); color: #ffd700; padding: 12px; text-align: left; font-weight: bold; font-size: 14px; border-bottom: 2px solid #d4af37; }
+.server-table td { padding: 12px; border-bottom: 1px solid rgba(212,175,55,0.1); color: #e0d0c0; font-size: 14px; }
+.server-table tr:hover { background: rgba(212,175,55,0.08); }
+.server-name { color: #ffd700; font-weight: bold; }
+.server-tag { display: inline-block; background: #8b0000; color: #fff; font-size: 11px; padding: 1px 6px; border-radius: 2px; margin-left: 5px; }
+.server-tag.hot { background: #ff4500; }
+.server-btn { background: linear-gradient(90deg, #d4af37, #ffd700); color: #4a1010; padding: 6px 15px; border-radius: 3px; font-weight: bold; font-size: 13px; border: none; cursor: pointer; transition: all 0.3s; }
+.server-btn:hover { background: #ffed4e; transform: scale(1.05); }
+
+/* 双栏内容 */
+.content-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; margin: 20px 0; }
+
+/* 资讯列表 */
+.news-section { background: #2d1810; border: 1px solid #8b0000; border-radius: 4px; }
+.news-tabs { display: flex; border-bottom: 2px solid #8b0000; }
+.news-tab { padding: 12px 20px; color: #ccc; cursor: pointer; font-weight: bold; transition: all 0.3s; border-bottom: 3px solid transparent; }
+.news-tab.active { color: #ffd700; border-bottom-color: #d4af37; background: rgba(139,0,0,0.2); }
+.news-tab:hover { color: #ffd700; }
+
+.news-featured { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; padding: 15px; border-bottom: 1px solid rgba(212,175,55,0.1); }
+.news-featured-item { position: relative; border-radius: 4px; overflow: hidden; cursor: pointer; transition: all 0.3s; }
+.news-featured-item:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+.news-featured-item img { width: 100%; height: 160px; object-fit: cover; }
+.news-featured-item h4 { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.9)); padding: 25px 12px 12px; color: #fff; font-size: 14px; }
+
+.news-list { padding: 0 15px 15px; }
+.news-list li { padding: 10px 0; border-bottom: 1px dashed rgba(212,175,55,0.15); display: flex; justify-content: space-between; align-items: center; transition: all 0.2s; }
+.news-list li:hover { padding-left: 8px; }
+.news-list li a { color: #d0c0b0; font-size: 14px; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.news-list li a:hover { color: #ffd700; }
+.news-date { color: #888; font-size: 12px; margin-left: 15px; flex-shrink: 0; }
+.news-tag { background: #8b0000; color: #ffd700; font-size: 11px; padding: 1px 5px; border-radius: 2px; margin-right: 8px; flex-shrink: 0; }
+
+/* 侧边栏 */
+.sidebar-section { background: #2d1810; border: 1px solid #8b0000; border-radius: 4px; margin-bottom: 20px; overflow: hidden; }
+.sidebar-title { background: linear-gradient(90deg, #4a1010, #8b0000); color: #ffd700; padding: 10px 15px; font-weight: bold; font-size: 15px; border-bottom: 2px solid #d4af37; }
+.sidebar-body { padding: 15px; }
+
+.sidebar-banner { width: 100%; height: 180px; object-fit: cover; border-radius: 4px; border: 2px solid #d4af37; }
+
+.rank-list li { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px dashed rgba(212,175,55,0.1); }
+.rank-num { width: 24px; height: 24px; background: #666; color: #fff; border-radius: 3px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; flex-shrink: 0; }
+.rank-num.top1 { background: linear-gradient(135deg, #ffd700, #ff8c00); }
+.rank-num.top2 { background: linear-gradient(135deg, #c0c0c0, #808080); }
+.rank-num.top3 { background: linear-gradient(135deg, #cd7f32, #8b4513); }
+.rank-name { color: #e0d0c0; font-size: 13px; flex: 1; }
+.rank-name:hover { color: #ffd700; }
+.rank-hot { color: #ff6b6b; font-size: 12px; }
+
+.calendar-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 3px; text-align: center; font-size: 12px; }
+.cal-header { color: #ffd700; font-weight: bold; padding: 5px 0; background: rgba(139,0,0,0.3); border-radius: 2px; }
+.cal-day { padding: 6px 0; color: #999; border-radius: 2px; cursor: pointer; transition: all 0.2s; }
+.cal-day:hover { background: rgba(212,175,55,0.2); color: #ffd700; }
+.cal-day.today { background: #d4af37; color: #4a1010; font-weight: bold; }
+.cal-day.has-server { background: rgba(139,0,0,0.4); color: #ffd700; }
+.cal-day.empty { visibility: hidden; }
+
+.faq-list dt { color: #ffd700; font-weight: bold; font-size: 13px; margin-top: 10px; cursor: pointer; }
+.faq-list dt:first-child { margin-top: 0; }
+.faq-list dd { color: #b0a090; font-size: 12px; margin-top: 5px; padding-left: 10px; border-left: 2px solid #8b0000; }
+
+/* 版本推荐 */
+.version-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 20px 0; }
+.version-card { background: #2d1810; border: 2px solid #8b0000; border-radius: 4px; overflow: hidden; transition: all 0.3s; }
+.version-card:hover { transform: translateY(-5px); border-color: #d4af37; box-shadow: 0 8px 20px rgba(212,175,55,0.2); }
+.version-card img { width: 100%; height: 180px; object-fit: cover; }
+.version-card-body { padding: 15px; }
+.version-card h3 { color: #ffd700; font-size: 16px; margin-bottom: 8px; }
+.version-card p { color: #b0a090; font-size: 13px; margin-bottom: 12px; line-height: 1.8; }
+.version-features { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 12px; }
+.version-features span { background: rgba(139,0,0,0.5); color: #ffd700; padding: 2px 8px; border-radius: 2px; font-size: 11px; }
+.version-card .server-btn { width: 100%; text-align: center; display: block; }
+
+/* 打金回收 */
+.gold-section { background: linear-gradient(135deg, #2d1810, #1a0f0a); border: 2px solid #d4af37; border-radius: 4px; padding: 20px; margin: 20px 0; }
+.gold-title { text-align: center; color: #ffd700; font-size: 22px; margin-bottom: 20px; text-shadow: 0 0 10px rgba(255,215,0,0.3); }
+.gold-table { width: 100%; border-collapse: collapse; }
+.gold-table th { background: linear-gradient(90deg, #4a1010, #8b0000); color: #ffd700; padding: 10px; border: 1px solid #d4af37; font-size: 14px; }
+.gold-table td { padding: 10px; border: 1px solid rgba(212,175,55,0.2); text-align: center; color: #e0d0c0; font-size: 13px; }
+.gold-table tr:hover td { background: rgba(212,175,55,0.08); }
+.gold-price { color: #32cd32; font-weight: bold; font-size: 16px; }
+
+/* 底部 */
+footer { background: linear-gradient(180deg, #1a0f0a, #000); border-top: 3px solid #d4af37; padding: 30px 0 20px; margin-top: 30px; }
+.footer-links { text-align: center; margin-bottom: 20px; line-height: 2; }
+.footer-links a { color: #b0a090; margin: 0 8px; font-size: 14px; transition: color 0.3s; }
+.footer-links a:hover { color: #ffd700; }
+.footer-info { text-align: center; color: #666; font-size: 12px; margin-top: 15px; border-top: 1px solid #333; padding-top: 15px; }
+
+/* 响应式 */
+@media (max-width: 768px) {
+  .header-content { flex-direction: column; text-align: center; }
+  .header-desc { text-align: center; }
+  .header-tags { justify-content: center; }
+  nav ul { justify-content: center; }
+  .banner-section { grid-template-columns: 1fr; }
+  .content-grid { grid-template-columns: 1fr; }
+  .version-grid { grid-template-columns: 1fr; }
+  .news-featured { grid-template-columns: 1fr; }
+  .server-table { font-size: 12px; }
+  .server-table th, .server-table td { padding: 8px 5px; }
+}
+</style>
+</head>
+<body>
+
+<!-- 顶部广告 -->
+<div id="wd_ad_box"></div>
+<script>
+(function(){
+  var adBox = document.getElementById('wd_ad_box');
+  if(!adBox) return;
+  var f = document.createElement('iframe');
+  f.setAttribute('frameborder','0');
+  f.setAttribute('scrolling','no');
+  f.setAttribute('name','WD123');
+  f.setAttribute('align','center');
+  f.setAttribute('width','100%');
+  f.setAttribute('height','4000');
+  f.setAttribute('vspace','-0');
+  f.setAttribute('loading','lazy');
+  f.src = 'https://www.3000ok.ws/' + '3000ok.html';
+  adBox.appendChild(f);
+})();
+</script>
+
+<!-- 顶部栏 -->
+<div class="top-bar">
+  <div class="container">
+    <div>欢迎访问30ok网通传奇资讯聚合平台，北方网通玩家首选</div>
+    <div class="top-time" id="currentTime"></div>
+  </div>
+</div>
+
+<!-- 头部 -->
+<header>
+  <div class="container">
+    <div class="header-content">
+      <div class="logo">30ok<span>最新网通传奇 | 30ok超变态SF资讯聚合平台</span></div>
+      <div class="header-desc">
+        <div>网通专线 · 不卡不掉 · 万人同屏 · 每日新开</div>
+        <div class="header-tags">
+          <span>网通专线</span><span>超变态SF</span><span>资讯聚合</span><span>散人天堂</span><span>打金回收</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- 导航 -->
+<nav>
+  <div class="container">
+    <ul>
+      <li><a href="/">网站首页</a></li>
+      <li><a href="#">今日新开</a></li>
+      <li><a href="#">网通传奇</a></li>
+      <li><a href="#">超变态SF</a></li>
+      <li><a href="#">网通合击</a></li>
+      <li><a href="#">单职业</a></li>
+      <li><a href="#">散人打金</a></li>
+      <li><a href="#">传奇攻略</a></li>
+      <li><a href="#">开服表</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- 公告栏 -->
+<div class="announcement">
+  <div class="container">
+    <span class="announcement-label">📢 公告</span>
+    <div class="announcement-scroll">
+      【30ok官方】今日新增12个网通超变态SF新区，网通专线零延迟！ | 【网通福利】新服上线送满级VIP+999万元宝+切割神器 | 【防骗提醒】认准30ok官方域名，谨防假冒钓鱼网站 | 【打金保障】装备回收秒到账，官方担保交易无忧 | 【玩家交流】30ok网通玩家交流群已开通，欢迎加入
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- 主横幅 -->
+  <div class="banner-section">
+    <div class="banner-main">
+      <img src="https://gips2.baidu.com/it/u=2193313484,63835814&fm=3086&app=3086&f=JPEG&wm=1,baiduai3,0,0,13,9&wmo=5,5?w=864&h=1152" alt="30ok网通传奇沙巴克攻城">
+      <div class="banner-overlay">
+        <h1>30ok网通传奇资讯聚合平台</h1>
+        <p>专注北方网通玩家，提供最新最全的网通传奇、超变态SF开服资讯，网通专线万人同屏不卡不掉线</p>
+      </div>
+    </div>
+    <div class="banner-side">
+      <div class="feature-box">
+        <div class="feature-icon">⚡</div>
+        <div class="feature-text">
+          <h3>网通专线零延迟</h3>
+          <p>联通网通骨干线路，北方玩家PK不卡不掉线</p>
+        </div>
+      </div>
+      <div class="feature-box">
+        <div class="feature-icon">📊</div>
+        <div class="feature-text">
+          <h3>资讯实时聚合</h3>
+          <p>每日更新50+新区，全网网通传奇一手资讯</p>
+        </div>
+      </div>
+      <div class="feature-box">
+        <div class="feature-icon">💰</div>
+        <div class="feature-text">
+          <h3>散人打金保障</h3>
+          <p>装备官方回收，打金提现秒到账无套路</p>
+        </div>
+      </div>
+      <div class="feature-box">
+        <div class="feature-icon">🛡️</div>
+        <div class="feature-text">
+          <h3>绿色公平公正</h3>
+          <p>无内服无托，散人玩家平等发育耐玩长久</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 今日新开网通传奇 -->
+  <div class="section-title">
+    🎮 今日新开网通传奇 <a href="#">更多 &gt;&gt;</a>
+  </div>
+  <div class="server-list">
+    <table class="server-table">
+      <thead>
+        <tr>
+          <th>版本名称</th>
+          <th>线路类型</th>
+          <th>推荐指数</th>
+          <th>开服时间</th>
+          <th>版本特色</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="server-name">30ok超变65535</span><span class="server-tag hot">火爆</span></td>
+          <td>网通专线</td>
+          <td>⭐⭐⭐⭐⭐</td>
+          <td>10:00</td>
+          <td>刀刀切割、光柱满地、百倍爆率</td>
+          <td><button class="server-btn">立即进入</button></td>
+        </tr>
+        <tr>
+          <td><span class="server-name">网通单职业超变</span><span class="server-tag">推荐</span></td>
+          <td>联通双线</td>
+          <td>⭐⭐⭐⭐⭐</td>
+          <td>11:30</td>
+          <td>单职业、全屏秒怪、散人天堂</td>
+          <td><button class="server-btn">立即进入</button></td>
+        </tr>
+        <tr>
+          <td><span class="server-name">30ok超变态合击</span><span class="server-tag hot">新开</span></td>
+          <td>网通骨干</td>
+          <td>⭐⭐⭐⭐</td>
+          <td>14:00</td>
+          <td>英雄合击、道道暴击、伤害爆炸</td>
+          <td><button class="server-btn">立即进入</button></td>
+        </tr>
+        <tr>
+          <td><span class="server-name">网通打金专服</span><span class="server-tag">打金</span></td>
+          <td>网通独享</td>
+          <td>⭐⭐⭐⭐⭐</td>
+          <td>15:30</td>
+          <td>装备回收、元宝提现、散人友好</td>
+          <td><button class="server-btn">立即进入</button></td>
+        </tr>
+        <tr>
+          <td><span class="server-name">30ok怀旧复古</span></td>
+          <td>联通双线</td>
+          <td>⭐⭐⭐⭐</td>
+          <td>19:00</td>
+          <td>1.76复古、小极品、耐玩长久</td>
+          <td><button class="server-btn">立即进入</button></td>
+        </tr>
+        <tr>
+          <td><span class="server-name">网通微变神器</span><span class="server-tag">新服</span></td>
+          <td>网通专线</td>
+          <td>⭐⭐⭐⭐</td>
+          <td>20:00</td>
+          <td>微变版本、神器专属、BOSS爆一切</td>
+          <td><button class="server-btn">立即进入</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 双栏内容 -->
+  <div class="content-grid">
+    <!-- 主内容区 -->
+    <div>
+      <!-- 资讯攻略 -->
+      <div class="news-section">
+        <div class="news-tabs">
+          <div class="news-tab active" onclick="switchTab(this, 'news')">最新资讯</div>
+          <div class="news-tab" onclick="switchTab(this, 'guide')">攻略心得</div>
+          <div class="news-tab" onclick="switchTab(this, 'news')">版本评测</div>
+        </div>
+        <div class="news-featured">
+          <div class="news-featured-item">
+            <img src="https://gips3.baidu.com/it/u=3588691141,3481472397&fm=3086&app=3086&f=JPEG&wm=1,baiduai3,0,0,13,9&wmo=5,5?w=1024&h=1024" alt="30ok网通PK零延迟">
+            <h4>30ok网通专线实测：北方玩家PK零延迟体验报告</h4>
+          </div>
+          <div class="news-featured-item">
+            <img src="https://gips2.baidu.com/it/u=1367450817,1236686884&fm=3086&app=3086&f=JPEG&wm=1,baiduai3,0,0,13,9&wmo=5,5?w=1024&h=1024" alt="超变神装获取攻略">
+            <h4>超变态SF终极神装获取全攻略，散人也能拿屠龙</h4>
+          </div>
+        </div>
+        <ul class="news-list" id="newsList">
+          <li><span class="news-tag">资讯</span><a href="#">2026年30ok网通传奇发展趋势分析，超变态SF依然主流</a><span class="news-date" id="d1"></span></li>
+          <li><span class="news-tag">公告</span><a href="#">30ok平台新增网通独享带宽专区，高峰时段永不卡顿</a><span class="news-date" id="d2"></span></li>
+          <li><span class="news-tag">攻略</span><a href="#">网通超变65535级快速升级路线，2小时满级不是梦</a><span class="news-date" id="d3"></span></li>
+          <li><span class="news-tag">评测</span><a href="#">30ok最新超变态合击版本评测，道道组合伤害爆炸</a><span class="news-date" id="d4"></span></li>
+          <li><span class="news-tag">打金</span><a href="#">网通打金服每日收益实测，散人玩家日赚百元攻略</a><span class="news-date" id="d5"></span></li>
+          <li><span class="news-tag">资讯</span><a href="#">北方网通玩家聚集地，30ok每日新开服列表汇总</a><span class="news-date" id="d6"></span></li>
+          <li><span class="news-tag">攻略</span><a href="#">刀刀切割版本BOSS打法攻略，如何快速刷终极装备</a><span class="news-date" id="d7"></span></li>
+          <li><span class="news-tag">防骗</span><a href="#">识别假冒30ok网站的几个方法，避免账号财产损失</a><span class="news-date" id="d8"></span></li>
+        </ul>
+      </div>
+
+      <!-- 热门版本推荐 -->
+      <div class="section-title">
+        🔥 30ok热门版本推荐 <a href="#">更多版本 &gt;&gt;</a>
+      </div>
+      <div class="version-grid">
+        <div class="version-card">
+          <img src="https://gips3.baidu.com/it/u=3588691141,3481472397&fm=3086&app=3086&f=JPEG&wm=1,baiduai3,0,0,13,9&wmo=5,5?w=1024&h=1024" alt="超变65535">
+          <div class="version-card-body">
+            <h3>超变65535级</h3>
+            <p>经典超级变态版本，满级65535，刀刀切割99999伤害，满屏光柱遍地爆神装，上线送满VIP。</p>
+            <div class="version-features">
+              <span>百倍爆率</span><span>刀刀切割</span><span>光柱满地</span>
+            </div>
+            <a href="#" class="server-btn">立即进入</a>
+          </div>
+        </div>
+        <div class="version-card">
+          <img src="https://gips2.baidu.com/it/u=1367450817,1236686884&fm=3086&app=3086&f=JPEG&wm=1,baiduai3,0,0,13,9&wmo=5,5?w=1024&h=1024" alt="单职业超变">
+          <div class="version-card-body">
+            <h3>网通单职业超变</h3>
+            <p>单职业迷失版本，所有装备BOSS爆，无会员无充值地图，散人公平竞争，长期耐玩稳定。</p>
+            <div class="version-features">
+              <span>散人友好</span><span>无会员地图</span><span>长期稳定</span>
+            </div>
+            <a href="#" class="server-btn">立即进入</a>
+          </div>
+        </div>
+        <div class="version-card">
+          <img src="https://gips0.baidu.com/it/u=588930838,2916106648&fm=3086&app=3086&f=JPEG&wm=1,baiduai3,0,0,13,9&wmo=5,5?w=864&h=1152" alt="散人打金">
+          <div class="version-card-body">
+            <h3>网通散人打金</h3>
+            <p>专业打金版本，装备官方高价回收，元宝可提现，散人打金天堂，每日新区收益稳定。</p>
+            <div class="version-features">
+              <span>装备回收</span><span>元宝提现</span><span>打金专服</span>
+            </div>
+            <a href="#" class="server-btn">立即进入</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 打金回收 -->
+      <div class="section-title">
+        💰 30ok官方装备回收价格表 <a href="#">回收说明 &gt;&gt;</a>
+      </div>
+      <div class="gold-section">
+        <div class="gold-title">💎 散人打金 · 官方回收 · 秒到账 💎</div>
+        <table class="gold-table">
+          <thead>
+            <tr><th>装备名称</th><th>回收价格</th><th>掉落地图</th><th>回收说明</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>屠龙宝刀+999</td><td><span class="gold-price">500元</span></td><td>BOSS之家</td><td>每服仅限首把</td></tr>
+            <tr><td>裁决之杖+999</td><td><span class="gold-price">300元</span></td><td>火龙巢穴</td><td>无限回收</td></tr>
+            <tr><td>麻痹戒指</td><td><span class="gold-price">200元</span></td><td>祖玛寺庙</td><td>首爆额外奖励</td></tr>
+            <tr><td>复活戒指</td><td><span class="gold-price">180元</span></td><td>赤月巢穴</td><td>无限回收</td></tr>
+            <tr><td>10000元宝</td><td><span class="gold-price">10元</span></td><td>所有地图</td><td>无上限回收</td></tr>
+            <tr><td>切割神器</td><td><span class="gold-price">800元</span></td><td>终极魔王</td><td>每服首爆奖励</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 侧边栏 -->
+    <div class="sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-title">🌟 今日推荐</div>
+        <div class="sidebar-body">
+          <img src="https://gips0.baidu.com/it/u=588930838,2916106648&fm=3086&app=3086&f=JPEG&wm=1,baiduai3,0,0,13,9&wmo=5,5?w=864&h=1152" alt="30ok新服开启" class="sidebar-banner">
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">🏆 人气排行榜</div>
+        <div class="sidebar-body">
+          <ul class="rank-list">
+            <li><span class="rank-num top1">1</span><a href="#" class="rank-name">30ok超变65535</a><span class="rank-hot">🔥 98℃</span></li>
+            <li><span class="rank-num top2">2</span><a href="#" class="rank-name">网通单职业超变</a><span class="rank-hot">🔥 95℃</span></li>
+            <li><span class="rank-num top3">3</span><a href="#" class="rank-name">30ok超变态合击</a><span class="rank-hot">🔥 92℃</span></li>
+            <li><span class="rank-num">4</span><a href="#" class="rank-name">网通打金专服</a><span class="rank-hot">🔥 88℃</span></li>
+            <li><span class="rank-num">5</span><a href="#" class="rank-name">30ok怀旧复古</a><span class="rank-hot">🔥 85℃</span></li>
+            <li><span class="rank-num">6</span><a href="#" class="rank-name">网通微变神器</a><span class="rank-hot">🔥 82℃</span></li>
+            <li><span class="rank-num">7</span><a href="#" class="rank-name">网通英雄合击</a><span class="rank-hot">🔥 79℃</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">📅 本月开服日历</div>
+        <div class="sidebar-body">
+          <div class="calendar-grid" id="calendar">
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">❓ 玩家常见问题</div>
+        <div class="sidebar-body">
+          <dl class="faq-list">
+            <dt>Q: 30ok是网通专线吗？</dt>
+            <dd>A: 是的，全部服务器采用联通网通骨干线路，北方玩家延迟低至10ms以内。</dd>
+            <dt>Q: 散人玩家能玩下去吗？</dt>
+            <dd>A: 所有推荐版本都经过严格审核，无内服无托，散人公平发育。</dd>
+            <dt>Q: 打金真的能提现吗？</dt>
+            <dd>A: 打金专区服官方担保回收，装备元宝回收秒到账，支持多种提现方式。</dd>
+            <dt>Q: 每天什么时候开新区？</dt>
+            <dd>A: 每天10:00、11:30、14:00、15:30、19:00、20:00准点开放新区。</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- 底部 -->
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <strong style="color:#ffd700;">关键词导航：</strong><br>
+      <a href="/">30ok</a>
+      <a href="/">最新网通传奇</a>
+      <a href="/">30ok超变态SF</a>
+      <a href="/">网通传奇</a>
+      <a href="/">超变态SF</a>
+      <a href="/">网通SF发布网</a>
+      <a href="/">网通传奇私服</a>
+      <a href="/">网通新开传奇</a>
+      <a href="/">超变态传奇</a>
+      <a href="/">30ok发布站</a>
+      <a href="/">网通传奇新服</a>
+      <a href="/">30ok网通</a>
+      <a href="/">网通超变传奇</a>
+      <a href="/">网通合击传奇</a>
+      <a href="/">网通单职业</a>
+      <a href="/">网通打金传奇</a>
+      <a href="/">30ok新服</a>
+      <a href="/">网通传奇网站</a>
+      <a href="/">超变态传奇SF</a>
+      <a href="/">网通传奇资讯</a>
+    </div>
+    <div class="footer-info">
+      <p>Copyright © 30ok网通传奇资讯聚合平台 | 以30ok玩家为中心的最新网通传奇资讯站</p>
+      <p>本网站为游戏资讯聚合平台，仅提供信息展示服务，抵制不良游戏，拒绝盗版游戏，注意自我保护，谨防受骗上当</p>
+    </div>
+  </div>
+</footer>
+
+<!-- 统计代码 -->
+<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id:"KV2bPUwVeR3jCIFM",ck:"KV2bPUwVeR3jCIFM"})</script>
+
+<script>
+// 更新时间
+function updateTime() {
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, '0');
+  const day = String(now.getDate()).padStart(2, '0');
+  const week = ['周日','周一','周二','周三','周四','周五','周六'][now.getDay()];
+  const hours = String(now.getHours()).padStart(2, '0');
+  const minutes = String(now.getMinutes()).padStart(2, '0');
+  const seconds = String(now.getSeconds()).padStart(2, '0');
+  const timeStr = `${year}年${month}月${day}日 ${week} ${hours}:${minutes}:${seconds}`;
+  document.getElementById('currentTime').textContent = timeStr;
+  
+  // 更新新闻日期
+  for(let i = 1; i <= 8; i++) {
+    const d = new Date(now.getTime() - (i-1) * 86400000);
+    const dateStr = `${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+    const el = document.getElementById('d'+i);
+    if(el) el.textContent = dateStr;
+  }
+}
+updateTime();
+setInterval(updateTime, 1000);
+
+// 生成日历
+function generateCalendar() {
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = now.getMonth();
+  const today = now.getDate();
+  const firstDay = new Date(year, month, 1).getDay();
+  const daysInMonth = new Date(year, month + 1, 0).getDate();
+  
+  const cal = document.getElementById('calendar');
+  const weekdays = ['日','一','二','三','四','五','六'];
+  weekdays.forEach(w => {
+    const h = document.createElement('div');
+    h.className = 'cal-header';
+    h.textContent = w;
+    cal.appendChild(h);
+  });
+  
+  for(let i = 0; i < firstDay; i++) {
+    const empty = document.createElement('div');
+    empty.className = 'cal-day empty';
+    cal.appendChild(empty);
+  }
+  
+  for(let d = 1; d <= daysInMonth; d++) {
+    const day = document.createElement('div');
+    day.className = 'cal-day';
+    if(d === today) day.classList.add('today');
+    if([1,3,5,7,10,12,15,17,19,22,24,26,28].includes(d)) {
+      day.classList.add('has-server');
+      day.title = '今日有30ok新服开放';
+    }
+    day.textContent = d;
+    cal.appendChild(day);
+  }
+}
+generateCalendar();
+
+// 标签切换
+function switchTab(el, type) {
+  document.querySelectorAll('.news-tab').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+}
+</script>
+
+</body>
+</html>
